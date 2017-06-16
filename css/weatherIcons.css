@@ -3,7 +3,7 @@
   display: inline-block;
   width: 12em;
   height: 10em;
-  font-size: 1em; /* control icon size here */
+  font-size: .5em; /* control icon size here */
 }
 
 .cloud {
@@ -52,7 +52,7 @@
 .sun {
   position: absolute;
   top: 50%;
-  left: 0;
+  left:0;
   width: 2.5em;
   height: 2.5em;
   margin: -1.25em;

@@ -2,8 +2,8 @@
     position: relative;
     width: 100%;
     transition: all 4 ease;
-    background: /*#02102a ClearNight*/
-    #81a0d4;
+    background: #02102a /*ClearNight*/
+    /*#81a0d4*/;
     height: 1000px;
     overflow: hidden;
     margin: 0;
@@ -12,7 +12,7 @@
 
 /*Clear Night*/
 
-.NightStars,
+.NightStars
 {
     width: 100%;
     height: 500px;

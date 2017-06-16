@@ -97,17 +97,30 @@ textarea {
 .weather{
     text-align: center;
     color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    transform: translateY(-200px);
 }
 .location{
     font-size: 50px;
-    font-family:'Raleway',sans-serif;
 }
 .degree{
-    font-size: 100px;
-    font-family: 'Titillium Web', sans-serif;
+    font-size: 70px;
     text-align: left;
 }
-
+.weather-condition{
+    font-size: 35px;   
+}
+#c,#f{
+    font-size: 35px;
+    cursor: pointer;
+}
+#c{
+    background:rgba(255,255,255,0.3);
+}
+.padd{
+    margin-bottom: 20px;
+}
 
 
 
