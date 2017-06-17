@@ -128,7 +128,64 @@ textarea {
     border: 0px;
     border-bottom:1px white solid; 
 }
+.padd div:first-child{
+    text-align: left;
+}
+.padd div:last-child{
+    text-align: right;
+}
 
+
+/*
+Media queries
+*/
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+   .padd{
+       font-size: 17px;
+   }
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+   .padd{
+       font-size: 14px;
+   }
+    
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .padd{
+        font-size: 12px;
+    }
+    
+}
+@media (max-width:600px){
+    .padd{
+        font-size: 11px;
+    }
+  
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) { 
+    .padd{
+        font-size: 8px;
+        }  
+    
+}
+@media (max-width: 320px){
+    .degree{
+        font-size: 50px;
+    }
+}
 
 
 

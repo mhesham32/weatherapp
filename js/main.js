@@ -1,12 +1,14 @@
 $(function () {
-    var city='';
-    
-    $('#city-btn').click(function (){
-       city=$('#city').val();
+    var city= $('#city-btn').click(function clicked(){
+      city=$('#city').val();
         console.log(city);
+        return city;
     
     }
     );
+    
+    
+    console.log(city);
        
     
     
@@ -21,7 +23,6 @@ function success(cP) { //CurrentPosition
     let long = cP.coords.longitude;
     //API
     var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&apikey=af408f04f6b3ddb17f417b63f38430be';
-    console.log(apiUrl);
     window.geoUrl = apiUrl;
 }
 
@@ -32,7 +33,7 @@ function failed(F) {
 if (navigator.geolocation) {
     navigator.geolocation.watchPosition(success, failed);
 }
-console.log(geoUrl);
+
 
 /*
 //Timestamp
