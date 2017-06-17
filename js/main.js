@@ -1,4 +1,16 @@
 $(function () {
+    var city='';
+    
+    $('#city-btn').click(function (){
+       city=$('#city').val();
+        console.log(city);
+    
+    }
+    );
+       
+    
+    
+    
 
 });
 var geoUrl;
@@ -21,6 +33,7 @@ if (navigator.geolocation) {
     navigator.geolocation.watchPosition(success, failed);
 }
 console.log(geoUrl);
+
 /*
 //Timestamp
 // Create a new JavaScript Date object based on the timestamp
