@@ -1,4 +1,7 @@
-$(function () {
+
+
+
+/*$(function () {
     var city= $('#city-btn').click(function clicked(){
       city=$('#city').val();
         console.log(city);
@@ -35,7 +38,7 @@ if (navigator.geolocation) {
 }
 
 
-/*
+
 //Timestamp
 // Create a new JavaScript Date object based on the timestamp
 // multiplied by 1000 so that the argument is in milliseconds, not seconds.

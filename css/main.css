@@ -94,12 +94,15 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.weather{
+.weather,.cityAPI{
     text-align: center;
     color: white;
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
     transform: translateY(-200px);
+}
+.cityAPI{
+    transform: translateY(30px);
 }
 .location{
     font-size: 50px;
@@ -134,6 +137,10 @@ textarea {
 .padd div:last-child{
     text-align: right;
 }
+.fehr{
+    font-size: 35px;
+}
+
 
 
 /*
@@ -177,14 +184,24 @@ Media queries
 /* Portrait phones and smaller */
 @media (max-width: 480px) { 
     .padd{
-        font-size: 8px;
-        }  
+        font-size: 9px;
+    }
     
 }
-@media (max-width: 320px){
+@media (max-width: 375px){
     .degree{
         font-size: 50px;
     }
+    .fehr{
+        font-size: 28px;
+    }
+}
+@media (min-height: 1024px){
+.bg{
+   min-height: {
+       1800px;
+   }
+}
 }
 
 
