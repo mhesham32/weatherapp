@@ -103,6 +103,7 @@ textarea {
 }
 .cityAPI{
     transform: translateY(30px);
+    z-index: 999;
 }
 .location{
     font-size: 50px;
@@ -198,11 +199,10 @@ Media queries
 }
 @media (min-height: 1024px){
 .bg{
-   min-height: {
-       1800px;
-   }
+   min-height: 
+       1800px;  
 }
-}
+  }
 
 
 

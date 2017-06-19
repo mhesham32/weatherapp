@@ -18,7 +18,6 @@ $('#city-btn').click(function clicked(){
               }
              console.log(dayOrNight);
              $('.cityAPI').append(creatTemplate(data));
-             console.log($('.degree')["0"].childNodes["0"].data.length);
          }
          
      });
@@ -34,6 +33,21 @@ function success(cP) { //CurrentPosition
     //API Geoposition
     var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&apikey=af408f04f6b3ddb17f417b63f38430be';
     console.log(apiUrl);
+    $.ajax({
+      url:apiUrl,
+      success:function(data){
+             var dayOrNight=data.weather[0].icon;
+              dayOrNight=dayOrNight[2];
+              if(dayOrNight=='d'){
+               dayOrNight='day';
+              }else{
+                  dayOrNight='night';
+              }
+             console.log(dayOrNight);
+             $('#location').append(creatTemplate(data));
+      }
+
+    });
 }
 
 function failed(F) {
@@ -68,8 +82,8 @@ var htmlTemplate=`<div class="location">${obj.name},${obj.sys.country}</div>
             <div class="row padd">
                 <!--Sunrise and Sunset-->
                 <div class="col-xs-8 col-xs-offset-2">
-                    <div class="sunrise col-xs-6">Sunrise: ${obj.sys.sunrise}</div>
-                    <div class="sunset col-xs-6">Sunset: ${obj.sys.sunset}</div>
+                    <div class="sunrise col-xs-6">Sunrise: ${dates(obj.sys.sunrise)}</div>
+                    <div class="sunset col-xs-6">Sunset: ${dates(obj.sys.sunset)}</div>
                 </div>
             </div>
             <div class="row padd">
@@ -83,6 +97,12 @@ var htmlTemplate=`<div class="location">${obj.name},${obj.sys.country}</div>
             `;
     return htmlTemplate;    
 }
-console.log($('.degree')["0"].childNodes["0"].data.length);
+ function dates(d){
+  var date=new Date(d*1000);
+  var hours=date.getHours();
+  var min='0'+date.getMinutes();
+  var formatted=hours+':'+min.substr(-2);
+  return formatted;
+ }
 
 });
