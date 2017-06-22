@@ -3,18 +3,19 @@
   display: inline-block;
   width: 12em;
   height: 10em;
-  font-size: .5em; /* control icon size here */
+  font-size: 8px; /* control icon size here */
+  color: #02102a;
 }
 
 .cloud {
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: 0;
+  left: 50%;
   width: 3.6875em;
   height: 3.6875em;
   margin: -1.84375em;
-  background: transparent;
+  background: currentColor;
   border-radius: 50%;
   box-shadow:
     -2.1875em 0.6875em 0 -0.6875em,
@@ -31,7 +32,7 @@
   display: block;
   width: 4.5625em;
   height: 1em;
-  background: transparent;
+  background: currentColor;
   box-shadow: 0 0.4375em 0 -0.0625em #fff;
 }
 .cloud:nth-child(2) {
@@ -52,11 +53,11 @@
 .sun {
   position: absolute;
   top: 50%;
-  left:0;
+  left:50%;
   width: 2.5em;
   height: 2.5em;
   margin: -1.25em;
-  background: transparent;
+  background: currentColor;
   border-radius: 50%;
   box-shadow: 0 0 0 0.375em #fff;
   animation: spin 12s infinite linear;
@@ -105,7 +106,7 @@
   width: 3.75em;
   height: 3.75em;
   margin: 0.375em 0 0 -2em;
-  background: transparent;
+  background: currentColor;
 }
 
 .rain:after {
@@ -152,32 +153,32 @@
   top: 50%;
   left: 50%;
   margin: -1.625em 0 0 -1.0125em;
-  border-top: 1.25em solid transparent;
+  border-top: 1.25em solid currentColor;
   border-right: 0.75em solid;
   border-bottom: 0.75em solid;
-  border-left: 0.5em solid transparent;
+  border-left: 0.5em solid currentColor;
   transform: skewX(-10deg);
 }
 .bolt:after {
   margin: -0.25em 0 0 -0.25em;
   border-top: 0.75em solid;
-  border-right: 0.5em solid transparent;
-  border-bottom: 1.25em solid transparent;
+  border-right: 0.5em solid currentColor;
+  border-bottom: 1.25em solid currentColor;
   border-left: 0.75em solid;
   transform: skewX(-10deg);
 }
 .bolt:nth-child(2):before {
   margin: -0.75em 0 0 -0.5em;
-  border-top: 0.625em solid transparent;
+  border-top: 0.625em solid currentColor;
   border-right: 0.375em solid;
   border-bottom: 0.375em solid;
-  border-left: 0.25em solid transparent;
+  border-left: 0.25em solid currentColor;
 }
 .bolt:nth-child(2):after {
   margin: -0.125em 0 0 -0.125em;
   border-top: 0.375em solid;
-  border-right: 0.25em solid transparent;
-  border-bottom: 0.625em solid transparent;
+  border-right: 0.25em solid currentColor;
+  border-bottom: 0.625em solid currentColor;
   border-left: 0.375em solid;
 }
 

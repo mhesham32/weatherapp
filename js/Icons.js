@@ -1,20 +1,39 @@
+function weatherIcon (Weather){
+  var showerSun=`<div class="icon sun-shower">
+  <div class="cloud"></div>
+  <div class="sun">
+    <div class="rays"></div>
+  </div>
+  <div class="rain"></div>
+</div>`,
+thunderStorm=`<div class="icon thunder-storm">
+  <div class="cloud"></div>
+  <div class="lightning">
+    <div class="bolt"></div>
+    <div class="bolt"></div>
+  </div>
+</div>`,
+cloudy=`<div class="icon cloudy">
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+</div>`,
+snow=`<div class="icon flurries">
+  <div class="cloud"></div>
+  <div class="snow">
+    <div class="flake"></div>
+    <div class="flake"></div>
+  </div>
+</div>`,
+sunny=`<div class="icon sunny">
+  <div class="sun">
+    <div class="rays"></div>
+  </div>
+</div>`,
+rains=`<div class="icon rainy">
+  <div class="cloud"></div>
+  <div class="rain"></div>
+</div>`
+weatherIcon;
 
 
-
-
-
-/*
-//Timestamp
-// Create a new JavaScript Date object based on the timestamp
-// multiplied by 1000 so that the argument is in milliseconds, not seconds.
-var date = new Date(1497422475104*1000);
-// Hours part from the timestamp
-var hours = date.getHours();
-// Minutes part from the timestamp
-var minutes = "0" + date.getMinutes();
-// Seconds part from the timestamp
-var seconds = "0" + date.getSeconds();
-
-// Will display time in 10:30:23 format
-var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-console.log(formattedTime );*/
+}
