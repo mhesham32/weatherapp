@@ -5,6 +5,8 @@ $('#city-btn').click(function clicked(){
         //API by city name
         var apiUrl='http://api.openweathermap.org/data/2.5/weather?q='+city+'&apikey=af408f04f6b3ddb17f417b63f38430be';
      console.log(apiUrl);
+    $('#location').text('');
+    $('.cityAPI').text('');
      $.ajax({
          url:apiUrl,
          success:function(data){
@@ -69,7 +71,7 @@ function creatTemplate(obj){
                         <div class="cloud"></div>
                     </div>
             </div>
-                    <div class="col-xs-6 degree klv"><span id="d">${obj.main.temp}</span>°<span id="c">C</span>|<span id="f">F</span></div>
+                    <div class="col-xs-6 degree klv"><span class="deg-span">${obj.main.temp}</span>°<span class="c">C</span>|<span class="f">F</span></div>
                 </div>
             </div>
             <div class="weather-condition">
@@ -109,16 +111,16 @@ function creatTemplate(obj){
   var formatted=hours+':'+min.substr(-2);
   return formatted;
  }
- var trueOrfalse=0;
+   
     function toCelsius(c){
-   $('.weather').delegate('#c','click',function(){
+   $('.weather').delegate('.c','click',function(){
        $(this).addClass('degbg');
-       $('#f').removeClass('degbg');
+       $('.f').removeClass('degbg');
        var celsius=c.main.temp-273.5,
            celsius2=c.main.temp_min-273.5,
            celsius3=c.main.temp_max-273.5;
        $('.degree').removeClass('klv');
-       $('#d').text(Math.round(celsius));
+       $('.deg-span').text(Math.round(celsius));
        $('.min span').text(Math.round(celsius2));
        $('.max span').text(Math.round(celsius3));
    });
@@ -126,14 +128,14 @@ function creatTemplate(obj){
     }
     
      function toFahrenheit(f){
-    $('.weather').delegate('#f','click',function(){
+    $('.weather').delegate('.f','click',function(){
        $(this).addClass('degbg');
-       $('#c').removeClass('degbg');
+       $('.c').removeClass('degbg');
        var fehrenheit=(f.main.temp-273.5)+32*(9/5),
            fehrenheit2=(f.main.temp_min-273.5)+32*(9/5),
            fehrenheit3=(f.main.temp_max-273.5)+32*(9/5);
        $('.degree').removeClass('klv');
-       $('#d').text(Math.round(fehrenheit));
+       $('.deg-span').text(Math.round(fehrenheit));
        $('.min span').text(Math.round(fehrenheit2));
        $('.max span').text(Math.round(fehrenheit3));
    }); 

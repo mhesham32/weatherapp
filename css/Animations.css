@@ -2,11 +2,11 @@
     position: relative;
     width: 100%;
     transition: all 4 ease;
-    background: #02102a /*ClearNight*/
-    /*#81a0d4*/;
+    background:#02102a/*Day #81a0d4*//*ClearNight#02102a*/;
     min-height: 1300px;
     overflow: hidden;
-    margin: 0;
+    padding: 0 !important;
+    
 }
 
 

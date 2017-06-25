@@ -115,7 +115,7 @@ textarea {
 .weather-condition{
     font-size: 35px;   
 }
-#c,#f{
+.c,.f{
     font-size: 35px;
     cursor: pointer;
 }
