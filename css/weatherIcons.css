@@ -6,6 +6,18 @@
   font-size: 8px; /* control icon size here */
   color: #02102a;
 }
+.moon{
+   position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 50%;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.375em #fff;
+  width: 2.5em;
+  height: 2.5em;
+  margin: -1.25em;
+}
 
 .cloud {
   position: absolute;

@@ -48,9 +48,11 @@ function success(cP) { //CurrentPosition
                   dayOrNight='night';
               }
              console.log(dayOrNight);
+             weatherIconAndAnimation(data);
              $('#location').append(creatTemplate(data));
           toCelsius(data);
           toFahrenheit(data);
+          
           
       }
 
@@ -66,10 +68,7 @@ function creatTemplate(obj){
                 <!--Icon and degree-->
             <div class="col-xs-6 col-xs-offset-3 ">
                 <div class="col-xs-6">
-                    <div class="icon cloudy">
-                        <div class="cloud"></div>
-                        <div class="cloud"></div>
-                    </div>
+                    ${weatherIcon}
             </div>
                     <div class="col-xs-6 degree klv"><span class="deg-span">${obj.main.temp}</span>°<span class="c">C</span>|<span class="f">F</span></div>
                 </div>

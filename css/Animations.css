@@ -17,7 +17,7 @@
 {
     width: 100%;
     height: 500px;
-    animation: NightStars 4s ease-in-out 2s 1;
+    animation: NightStars 4s ease-in-out 0s 1;
     transform: translateY(-500px);
     animation-fill-mode: forwards;
 }
