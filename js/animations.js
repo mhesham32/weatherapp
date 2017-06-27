@@ -41,6 +41,13 @@ moon=`<div class="icon ">
   
   
   var weatherId=w.weather[0].id;
+  var dayOrNight=w.weather[0].icon;
+              dayOrNight=dayOrNight[2];
+              if(dayOrNight=='d'){
+               dayOrNight='day';
+              }else{
+                  dayOrNight='night';
+              }
 
    function weatherCases(){
      var 
@@ -53,20 +60,62 @@ moon=`<div class="icon ">
   $('.icon').css('color',color);
   $('.bg').css('background',color);
 }
-
+ 
   switch(weatherId){
-   case weatherId>200&&weatherId<300:
+   case weatherId>199&&weatherId<210:
   weatherIcon=thunderStormIcon;
-  break;
-  case 800:
-  weatherIcon=moon;
-  image2Src='NightStars.png';
+  image1Src='LightStrike';
+  image2Src='nightRain';
+  image1Class='LightStrike';
   image2Class='NightStars';
-  bgColor('#000');
+  bgColor('#02102a');
+
+  break;
+
+  case weatherId>209&&weatherId<233:
+  if (dayOrNight='day'){
+    image2Src='heavyClouds';
+    bgColor('#b5bab6');
+  }else{
+    image2Src='nightHeavyClouds';
+    bgColor('#02102a');
+  }
+  weatherIcon=thunderStormIcon;
+  image1Class='LightStrike';
+  image2Class='NightStars';
+  break;
+
+  case 800:
+  if (dayOrNight='night'){
+  weatherIcon=moon;
+  image2Src='NightStars';
+  image2Class='NightStars';
+  bgColor('#34414e');
+}else{
+  weatherIcon=sunnyIcon;
+  image1Class='hidden';
+  image2Src='SUN';
+  image2Class='Sunny'; 
+  bgColor('#77acc7');
 }
 
- var imagesTemp=`<img src="img/${image1Src}" class="${image1Class} hidden">
-        <img src="img/${image2Src}" class="${image2Class}">`;
+  break;
+  default:
+  $('#images').css('height','500px');
+  $('img').css('display','none');
+  if(dayOrNight='day') {
+    bgColor('#77acc7');
+    weatherIcon=sunnyIcon;
+  }else{
+    bgColor('#02102a');
+    weatherIcon=moon;
+  }
+  image1Class='hidden';
+  image2Class='hidden';
+}
+
+ var imagesTemp=`<img src="img/${image1Src}.png" class="${image1Class}">
+        <img src="img/${image2Src}.png" class="${image2Class}">`;
 console.log(imagesTemp);
  return imagesTemp;
    }

@@ -11,14 +11,7 @@ $('#city-btn').click(function clicked(){
          url:apiUrl,
          success:function(data){
              console.log(data);
-             var dayOrNight=data.weather[0].icon;
-              dayOrNight=dayOrNight[2];
-              if(dayOrNight=='d'){
-               dayOrNight='day';
-              }else{
-                  dayOrNight='night';
-              }
-             console.log(dayOrNight);
+               weatherIconAndAnimation(data);
              $('.cityAPI').append(creatTemplate(data));
              toCelsius(data);
           toFahrenheit(data);
@@ -40,19 +33,10 @@ function success(cP) { //CurrentPosition
     $.ajax({
       url:apiUrl,
       success:function(data){
-             var dayOrNight=data.weather[0].icon;
-              dayOrNight=dayOrNight[2];
-              if(dayOrNight=='d'){
-               dayOrNight='day';
-              }else{
-                  dayOrNight='night';
-              }
-             console.log(dayOrNight);
              weatherIconAndAnimation(data);
              $('#location').append(creatTemplate(data));
           toCelsius(data);
-          toFahrenheit(data);
-          
+          toFahrenheit(data)      
           
       }
 
@@ -67,10 +51,10 @@ function creatTemplate(obj){
             <div class="row">
                 <!--Icon and degree-->
             <div class="col-xs-6 col-xs-offset-3 ">
-                <div class="col-xs-6">
+                <div class="col-sm-6">
                     ${weatherIcon}
             </div>
-                    <div class="col-xs-6 degree klv"><span class="deg-span">${obj.main.temp}</span>°<span class="c">C</span>|<span class="f">F</span></div>
+                    <div class="col-sm-6 degree klv"><span class="deg-span">${obj.main.temp}</span>°<span class="c">C</span>|<span class="f">F</span></div>
                 </div>
             </div>
             <div class="weather-condition">
