@@ -48,6 +48,7 @@ moon=`<div class="icon ">
               }else{
                   dayOrNight='night';
               }
+              console.log(dayOrNight);
 
    function weatherCases(){
      var 
@@ -57,11 +58,15 @@ moon=`<div class="icon ">
         image2Class;
 
         function bgColor(color){
-  $('.icon').css('color',color);
+          $('head').append(`<style>
+    .icon{
+        color:${color}!important ;
+    }
+    </style>`);
   $('.bg').css('background',color);
-}
+   }
  
-  switch(weatherId){
+  switch(true){
    case weatherId>199&&weatherId<210:
   weatherIcon=thunderStormIcon;
   image1Src='LightStrike';
@@ -73,7 +78,7 @@ moon=`<div class="icon ">
   break;
 
   case weatherId>209&&weatherId<233:
-  if (dayOrNight='day'){
+  if (dayOrNight==='day'){
     image2Src='heavyClouds';
     bgColor('#b5bab6');
   }else{
@@ -85,13 +90,45 @@ moon=`<div class="icon ">
   image2Class='NightStars';
   break;
 
-  case 800:
-  if (dayOrNight='night'){
+  case weatherId>299&&weatherId<399:
+  if(dayOrNight==='day'){
+    weatherIcon=showerSunIcon;
+    bgColor('#77acc7');
+  }else if(dayOrNight==='night'){
+    weatherIcon=rainsIcon;
+    bgColor('#02102a');
+  }
+  image1Class='hidden';
+  image2Src='rain';
+  image2Class='NightStars';
+  break;
+
+  case weatherId>499&&weatherId<599:
+  if(dayOrNight==='day'){
+   bgColor('#77acc7');
+   image2Src='dayHeavyRain';
+   weatherIcon=showerSunIcon;
+  }
+  else if(dayOrNight==='night'){
+     bgColor('#02102a'); 
+     weatherIcon=rainsIcon;
+     image2Src='nightHeavyRain';
+  }
+  image1Class='hidden';
+  image2Class='NightStars';
+  break;
+
+
+
+  case weatherId=== 800:
+  if (dayOrNight==='night'){
   weatherIcon=moon;
+  image1Class='hidden';
   image2Src='NightStars';
   image2Class='NightStars';
-  bgColor('#34414e');
-}else{
+  bgColor('#02102a');
+}
+else if(dayOrNight==='day'){
   weatherIcon=sunnyIcon;
   image1Class='hidden';
   image2Src='SUN';
@@ -112,6 +149,7 @@ moon=`<div class="icon ">
   }
   image1Class='hidden';
   image2Class='hidden';
+ 
 }
 
  var imagesTemp=`<img src="img/${image1Src}.png" class="${image1Class}">

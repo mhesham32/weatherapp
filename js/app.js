@@ -7,6 +7,7 @@ $('#city-btn').click(function clicked(){
      console.log(apiUrl);
     $('#location').text('');
     $('.cityAPI').text('');
+    $('img').addClass('hidden')
      $.ajax({
          url:apiUrl,
          success:function(data){
@@ -51,7 +52,7 @@ function creatTemplate(obj){
             <div class="row">
                 <!--Icon and degree-->
             <div class="col-xs-6 col-xs-offset-3 ">
-                <div class="col-sm-6">
+                <div class="col-sm-6 iconC">
                     ${weatherIcon}
             </div>
                     <div class="col-sm-6 degree klv"><span class="deg-span">${obj.main.temp}</span>°<span class="c">C</span>|<span class="f">F</span></div>
