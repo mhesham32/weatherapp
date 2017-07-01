@@ -180,7 +180,7 @@ Media queries
     .padd{
         font-size: 12px;
     }
-    #images{
+    #images,.LightCloud{
         height: 470px;
     }
     
@@ -189,7 +189,7 @@ Media queries
     .padd{
         font-size: 11px;
     }
-    #images{
+    #images,.LightCloud{
         height: 420px;
     }
   
@@ -212,7 +212,7 @@ Media queries
     .klv{
         font-size: 28px;
     }
-    #images{
+    #images,.LightCloud{
         height: 300px;
     }
     

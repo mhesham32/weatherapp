@@ -133,9 +133,9 @@ moon=`<div class="icon ">
    
    case weatherId>800&&weatherId<900:
    weatherIcon=cloudyIcon;
-   image2Class='hidden';
-   image1Src='lightcloud';
-   image1Class='LightCloud';
+   image1Class='hidden';
+   image2Src='lightcloud';
+   image2Class='LightCloud';
    if (dayOrNight==='day'){
     bgColor('#08589d');
   }else{
