@@ -180,11 +180,17 @@ Media queries
     .padd{
         font-size: 12px;
     }
+    #images{
+        height: 470px;
+    }
     
 }
 @media (max-width:600px){
     .padd{
         font-size: 11px;
+    }
+    #images{
+        height: 420px;
     }
   
 }
@@ -194,6 +200,9 @@ Media queries
     .padd{
         font-size: 9px;
     }
+    #images{
+        height: 380px;
+    }
     
 }
 @media (max-width: 375px){
@@ -202,6 +211,9 @@ Media queries
     }
     .klv{
         font-size: 28px;
+    }
+    #images{
+        height: 300px;
     }
     
 }
