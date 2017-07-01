@@ -118,7 +118,30 @@ moon=`<div class="icon ">
   image2Class='NightStars';
   break;
 
-
+  case weatherId>599&&weatherId<700:
+  weatherIcon=snowIcon;
+  image1Src='snowFlake';
+  image2Src='Snow';
+  image1Class='SnowFlake';
+  image2Class='NightStars';
+  if (dayOrNight==='day'){
+    bgColor('#08589d');
+  }else{
+    bgColor('#02102a'); 
+  }
+   break;
+   
+   case weatherId>800&&weatherId<900:
+   weatherIcon=cloudyIcon;
+   image2Class='hidden';
+   image1Src='lightcloud';
+   image1Class='LightCloud';
+   if (dayOrNight==='day'){
+    bgColor('#08589d');
+  }else{
+    bgColor('#02102a'); 
+  }
+   break;
 
   case weatherId=== 800:
   if (dayOrNight==='night'){
@@ -135,15 +158,15 @@ else if(dayOrNight==='day'){
   image2Class='Sunny'; 
   bgColor('#77acc7');
 }
-
   break;
+
   default:
   $('#images').css('height','500px');
   $('img').css('display','none');
-  if(dayOrNight='day') {
+  if(dayOrNight=='day') {
     bgColor('#77acc7');
     weatherIcon=sunnyIcon;
-  }else{
+  }else {
     bgColor('#02102a');
     weatherIcon=moon;
   }

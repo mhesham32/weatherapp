@@ -10,7 +10,16 @@
 
 
 
-/*Clear Night*/
+.SnowFlake{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: LightStrike 2s 6s ease forwards,
+        SnowFlake 8s linear  infinite ;
+}
 
 .NightStars
 {
@@ -23,12 +32,12 @@
 
 .LightCloud {
     width: 100%;
-    height: 700px;
+    height: 500px;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateX(100%);
-    animation: LightCloud 30s linear 6s forwards;
+    animation: LightCloud 30s linear 3s forwards;
 }
 .LightStrike{
     width: 100%;
@@ -42,7 +51,7 @@
 }
 
 
-/*Sunny*/
+
 
 .Sunny {
     width: 100%;
@@ -50,6 +59,12 @@
     animation: Sunny 4s ease-in-out 2s 1;
     animation-fill-mode: forwards;
     opacity: 0;
+}
+@keyframes SnowFlake{
+  
+    100%{
+       transform: rotate(360deg);
+    }
 }
 
 @keyframes Sunny{

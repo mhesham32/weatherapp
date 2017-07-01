@@ -101,7 +101,9 @@ textarea {
     font-size: 20px;
     transform: translateY(-200px);
 }
-
+#images{
+    height: 500px;
+}
 .cityAPI{
     transform: translateY(30px);
     z-index: 999;
