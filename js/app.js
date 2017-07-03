@@ -1,5 +1,12 @@
 $(function(){
-$('#city-btn').click(function clicked(){
+$('#city-btn').click(function (){clicked();});
+$('#city').on('keydown', function(e) {
+    if (e.which == 13) {
+       clicked();
+    }
+});
+
+function clicked(){
       var city=$('#city').val();
         console.log(city);
         //API by city name
@@ -7,7 +14,7 @@ $('#city-btn').click(function clicked(){
      console.log(apiUrl);
     $('#location').text('');
     $('.cityAPI').text('');
-    $('img').addClass('hidden')
+    $('#images img').addClass('hidden');
      $.ajax({
          url:apiUrl,
          success:function(data){
@@ -20,7 +27,7 @@ $('#city-btn').click(function clicked(){
          
      });
     }
-    );
+    
       if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, failed);
       }
@@ -124,6 +131,13 @@ function creatTemplate(obj){
        $('.max span').text(Math.round(fehrenheit3));
    }); 
     }
+    $('#mostafa').click(function(){
+        window.open('http://www.mostafahesham.ml/','_blank');
+    });
+    $('#github').click(function(){
+      window.open('https://github.com/mhesham32/weatherapp','_blank');
+
+    });
 
   
 
