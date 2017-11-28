@@ -10,7 +10,7 @@ function clicked(){
       var city=$('#city').val();
         console.log(city);
         //API by city name
-        var apiUrl='http://api.openweathermap.org/data/2.5/weather?q='+city+'&apikey=af408f04f6b3ddb17f417b63f38430be';
+        var apiUrl='https://api.openweathermap.org/data/2.5/weather?q='+city+'&apikey=af408f04f6b3ddb17f417b63f38430be';
      console.log(apiUrl);
     $('#location').text('');
     $('.cityAPI').text('');
